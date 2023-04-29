@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
 
     <title>Hello, world!</title>
   </head>
@@ -103,7 +107,7 @@
       {{-- end of Carousel --}}
 
     <div>
-        <div class="info-section" data-aos="fade-up">
+        <div class="info-section" data-aos="fade-right">
             <div class="image1">
                 <img src="image/notification.png" alt="">
             </div>
@@ -115,7 +119,7 @@
 
         </div>
     <div>
-            <div class="info-section1" data-aos="fade-up">
+            <div class="info-section1" data-aos="fade-left">
                 <div class="settings">
                     <h3>Settings</h3>
                     <p>You can set custom times, audio tone and volume via Settings.</p>
@@ -123,11 +127,10 @@
                 <div class="image2">
                     <img src="image/settings.png" alt="">
                 </div>
-
             </div>
     </div>
     
-    <div class="px-5 py-5">
+    <div class="px-5 py-5" data-aos="fade-left">
         <h3>FAQs</h3>
         <p>Frequenly ask Questions</p>
         <div class="accordion" id="accordionExample">
@@ -176,6 +179,11 @@
     </div>
 
 
+    <script>
+      AOS.init({
+  duration: 1200,
+})
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
