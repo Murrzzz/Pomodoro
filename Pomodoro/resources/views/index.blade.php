@@ -13,10 +13,11 @@
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
-
+    <link rel="stylesheet" href="css">
     <title>Hello, world!</title>
   </head>
   <body>
+    <script src="node_modules/bootstrap/dist/js/booststrap.js"></script>
     <div class="box">
         {{-- Nav bar --}}
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
@@ -43,6 +44,24 @@
         </nav>
         {{-- End of NavBar --}}
 
+        <div>
+            <nav class="sub_nav_flex">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+        </div>
         <div style="margin-top:20%" class="position-absolute start-50 translate-middle">
             <p style="font-size:200px; color:white"">00:00</p>
         </div>
@@ -76,7 +95,7 @@
                   <img src="image/notification.png" alt="">
               </div>
               <div class="notification">
-                  <h3>Notification</h3>
+                  <h3 class="bg-primary">Notification</h3>
                   <p>You can change the audio tone and volume via Settings
                       Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
               </div>
