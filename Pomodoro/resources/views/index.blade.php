@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="css">
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="box container-fluid">
     <script src="node_modules/bootstrap/dist/js/booststrap.js"></script>
-    <div class="box">
+    <div class="row">
         {{-- Nav bar --}}
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
             <div class="container-fluid">
@@ -32,7 +32,7 @@
                 <form class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="#"><i class="bi bi-book"></i> Log</a>
+                            <a class="nav-link " aria-current="page" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><i class="bi bi-book"></i> Log</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="bi bi-heptagon"></i> Settings</a>
@@ -44,112 +44,115 @@
         </nav>
         {{-- End of NavBar --}}
 
-        <div>
-            <nav class="sub_nav_flex">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+        <div class=""style="padding-top:10%">
+          
+          <nav>
+            <ul>
+              <li><a href="#" onclick="Pomodoro()">Pomodoro</a></li>
+              <li><a href="#" onclick="Shortbreak()">Shortbreak</a></li>
+              <li><a href="#" onclick="Longbreak()">Longbreak</a></li>
+            </ul>
+          </nav>
+
+
+          <div style="" class=" ">
+            <p class="text-center" style="font-size:200px; color:white"">00:00</p>
+
+              <button class="btn" onclick="changeBackground()">Change Background</button>
+
+
+          </div>
         </div>
-        <div style="margin-top:20%" class="position-absolute start-50 translate-middle">
-            <p style="font-size:200px; color:white"">00:00</p>
-        </div>
+
 
 
     </div>
 
-    {{-- Carousel --}}
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="info-section" data-aos="fade-up">
-              <div class="image1">
+  <div class="container-fluid bg-white">
+    <div class="row">
+      {{-- Carousel --}}
+      <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="info-section row" data-aos="fade-right">
+              <div class="image1 col-sm-10 col-md-8">
                   <img src="image/notification.png" alt="">
               </div>
-              <div class="notification">
+              <div class="notification col-sm-10 col-md-4">
                   <h3>Notification</h3>
                   <p>You can change the audio tone and volume via Settings
                       Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
               </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <div class="info-section" data-aos="fade-up">
-              <div class="image1">
+          </div>
+          <div class="carousel-item">
+            <div class="info-section row" data-aos="fade-right">
+              <div class="image1 col-sm-10 col-md-8">
                   <img src="image/notification.png" alt="">
               </div>
-              <div class="notification">
-                  <h3 class="bg-primary">Notification</h3>
-                  <p>You can change the audio tone and volume via Settings
-                      Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
-              </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="info-section" data-aos="fade-up">
-              <div class="image1">
-                  <img src="image/notification.png" alt="">
-              </div>
-              <div class="notification">
+              <div class="notification col-sm-10 col-md-4">
                   <h3>Notification</h3>
                   <p>You can change the audio tone and volume via Settings
                       Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
               </div>
             </div>
+          </div>
+          <div class="carousel-item">
+            <div class="info-section row" data-aos="fade-right">
+              <div class="image1 col-sm-10 col-md-8">
+                  <img src="image/notification.png" alt="">
+              </div>
+              <div class="notification col-sm-10 col-md-4">
+                  <h3>Notification</h3>
+                  <p>You can change the audio tone and volume via Settings
+                      Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
+              </div>
+            </div>
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        {{-- end of Carousel --}}
     </div>
-      {{-- end of Carousel --}}
 
-    <div>
-        <div class="info-section" data-aos="fade-right">
-            <div class="image1">
-                <img src="image/notification.png" alt="">
-            </div>
-            <div class="notification">
-                <h3>Notification</h3>
-                <p>You can change the audio tone and volume via Settings
-                    Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
-            </div>
 
+
+        <div class="info-section row" data-aos="fade-right">
+          <div class="image1 col-sm-10 col-md-7 col-lg-6">
+              <img src="image/notification.png" alt="">
+          </div>
+          <div class="notification col-sm-10 col-md-5 col-lg-6">
+              <h3>Notification</h3>
+              <p>You can change the audio tone and volume via Settings
+                  Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
+          </div>
         </div>
-    <div>
-            <div class="info-section1" data-aos="fade-left">
-                <div class="settings">
-                    <h3>Settings</h3>
-                    <p>You can set custom times, audio tone and volume via Settings.</p>
-                </div>
-                <div class="image2">
-                    <img src="image/settings.png" alt="">
-                </div>
-            </div>
-    </div>
+
+
+      <div class="info-section1 row" data-aos="fade-left">
+          <div class="settings col-sm-10 col-md-5 col-lg-6">
+              <h3>Settings</h3>
+              <p>You can set custom times, audio tone and volume via Settings.</p>
+          </div>
+          <div class="image2 col-sm-10 col-md-7 col-lg-6">
+              <img src="image/settings.png" alt="">
+          </div>
+      </div>
+
     
-    <div class="px-5 py-5" data-aos="fade-left">
+    <div class="px-5 py-5" data-aos="fade-up">
         <h3>FAQs</h3>
         <p>Frequenly ask Questions</p>
         <div class="accordion" id="accordionExample">
@@ -190,19 +193,54 @@
               </div>
             </div>
           </div>
+
+        </div>
     </div>
 
 
-
-    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <script>
       AOS.init({
   duration: 1200,
 })
     </script>
+      <script>
+        function Pomodoro() {
+          document.body.style.backgroundColor = "#70A1BD"; /* change background color */
+        }
+        function Shortbreak() {
+          document.body.style.backgroundColor = "#EA5C5C"; /* change background color */
+        }
+        function Longbreak() {
+          document.body.style.backgroundColor = "#81A5FD"; /* change background color */
+        }
+      </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

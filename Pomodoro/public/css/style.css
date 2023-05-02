@@ -1,10 +1,24 @@
+body{
+  margin-left: 0%; 
+  margin-right: 0%; 
+  padding: 0;
+}
 .box {
-    background:#70A1BD;
-    height:100vh;
-  }
 
+  background:#70A1BD;
+  padding: right 0%;;
+  padding-left: 0%;
+  margin-right: 0%;
+  margin-left: 0%;
+   
+  }
+  .paddingzero {
+    width: 100%; /* take up full width of parent element */
+
+  }
   /* Nofication */
   .image1 img {
+    
     width: clamp(18.75rem, 14.0625rem + 20.8333vw, 37.5rem);
   }
 
@@ -100,3 +114,38 @@ font-size: clamp(1.5rem, 2.5vw, 4rem);
 /* end carousel */
 
 
+/* Nav bar */nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #fffbfb;
+}
+
+nav a::before {
+  text-decoration: none;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #faf5f5;
+  transition: all 0.3s ease;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* end of navbar */
