@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
 
     <title>Hello, world!</title>
   </head>
@@ -40,7 +40,7 @@
         {{-- End of NavBar --}}
 
         <div style="margin-top:20%" class="position-absolute start-50 translate-middle">
-            <p style="font-size:200px; color:white"">00:00</p>
+            <p style="font-size:200px; color:white">00:00</p>
         </div>
 
 
