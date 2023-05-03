@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css">
     <title>Hello, world!</title>
   </head>
-  <body class="box container-fluid">
+  <body class="box container-fluid col-sm-12">
     <script src="node_modules/bootstrap/dist/js/booststrap.js"></script>
     <div class="row">
         {{-- Nav bar --}}
@@ -32,7 +32,7 @@
                 <form class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><i class="bi bi-book"></i> Log</a>
+                            <a class="nav-link " aria-current="page" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logModal" data-bs-whatever="@fat"><i class="bi bi-book"></i> Log</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="bi bi-heptagon"></i> Settings</a>
@@ -44,25 +44,28 @@
         </nav>
         {{-- End of NavBar --}}
 
-        <div class=""style="padding-top:10%">
+        <div class="container-fluid" style="padding-top: 10%">
+          <div class="row"style="">
           
-          <nav>
-            <ul>
-              <li><a href="#" onclick="Pomodoro()">Pomodoro</a></li>
-              <li><a href="#" onclick="Shortbreak()">Shortbreak</a></li>
-              <li><a href="#" onclick="Longbreak()">Longbreak</a></li>
-            </ul>
-          </nav>
-
-
-          <div style="" class=" ">
-            <p class="text-center" style="font-size:200px; color:white"">00:00</p>
-
-              <button class="btn" onclick="changeBackground()">Change Background</button>
+            <div>
+              <nav>
+                <ul>
+                  <li><a href="#" onclick="Pomodoro()">Pomodoro</a></li>
+                  <li><a href="#" onclick="Shortbreak()">Shortbreak</a></li>
+                  <li><a href="#" onclick="Longbreak()">Longbreak</a></li>
+                </ul>
+              </nav>
+            </div>
+ 
+            <div class="col-sm-12 responsive-txt">
+              <p class="text-center" style="font-size:100px; color:white"">00:00</p>
+  
+            </div>
 
 
           </div>
         </div>
+
 
 
 
@@ -79,9 +82,9 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="info-section row" data-aos="fade-right">
+            <div class="info-section row" >
               <div class="image1 col-sm-10 col-md-8">
-                  <img src="image/notification.png" alt="">
+                  <img class="img-responsive" src="image/notification.png" alt="">
               </div>
               <div class="notification col-sm-10 col-md-4">
                   <h3>Notification</h3>
@@ -91,9 +94,9 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="info-section row" data-aos="fade-right">
+            <div class="info-section row" >
               <div class="image1 col-sm-10 col-md-8">
-                  <img src="image/notification.png" alt="">
+                  <img class="img-responsive"src="image/notification.png" alt="">
               </div>
               <div class="notification col-sm-10 col-md-4">
                   <h3>Notification</h3>
@@ -103,9 +106,9 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="info-section row" data-aos="fade-right">
+            <div class="info-section row" >
               <div class="image1 col-sm-10 col-md-8">
-                  <img src="image/notification.png" alt="">
+                  <img class="img-responsive"src="image/notification.png" alt="">
               </div>
               <div class="notification col-sm-10 col-md-4">
                   <h3>Notification</h3>
@@ -129,9 +132,9 @@
 
 
 
-        <div class="info-section row" data-aos="fade-right">
+        <div class="info-section row" >
           <div class="image1 col-sm-10 col-md-7 col-lg-6">
-              <img src="image/notification.png" alt="">
+              <img class="img-responsive"src="image/notification.png" alt="">
           </div>
           <div class="notification col-sm-10 col-md-5 col-lg-6">
               <h3>Notification</h3>
@@ -141,18 +144,18 @@
         </div>
 
 
-      <div class="info-section1 row" data-aos="fade-left">
+      <div class="info-section1 row">
           <div class="settings col-sm-10 col-md-5 col-lg-6">
               <h3>Settings</h3>
               <p>You can set custom times, audio tone and volume via Settings.</p>
           </div>
           <div class="image2 col-sm-10 col-md-7 col-lg-6">
-              <img src="image/settings.png" alt="">
+              <img class="img-responsive"src="image/settings.png" alt="">
           </div>
       </div>
 
     
-    <div class="px-5 py-5" data-aos="fade-up">
+    <div class="px-5 py-5" >
         <h3>FAQs</h3>
         <p>Frequenly ask Questions</p>
         <div class="accordion" id="accordionExample">
@@ -197,9 +200,9 @@
         </div>
     </div>
 
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+{{-- Log modal --}}
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">New message</h5>
@@ -224,11 +227,14 @@
         </div>
       </div>
     </div>
+  {{-- End log modal --}}
+
+
 
     <script>
       AOS.init({
   duration: 1200,
-})
+  })
     </script>
       <script>
         function Pomodoro() {

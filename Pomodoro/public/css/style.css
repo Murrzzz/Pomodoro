@@ -6,7 +6,7 @@ body{
 .box {
 
   background:#70A1BD;
-  padding: right 0%;;
+  padding-right:  0%;;
   padding-left: 0%;
   margin-right: 0%;
   margin-left: 0%;
@@ -149,3 +149,13 @@ nav a:hover::before {
 }
 
 /* end of navbar */
+
+.img-responsive{
+  max-width: 100%;
+height: auto;
+
+}
+.responsive-txt{
+  max-width: 100%;
+  height: auto;
+}
