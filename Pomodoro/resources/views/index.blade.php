@@ -294,7 +294,7 @@
           document.getElementById("card3").style.color = "#ffffff";
           document.getElementById("card4").style.backgroundColor = "#EA5C5C"; /* change background color */
           document.getElementById("card4").style.color = "#ffffff";
-
+{{-- comment --}}
         }
         function Longbreak() {
           document.body.style.backgroundColor = "#244659"; /* change background color */
