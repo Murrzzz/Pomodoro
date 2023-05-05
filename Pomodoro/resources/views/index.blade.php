@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="css">
     <title>Pomodoro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +21,7 @@
   
   
   <body class="box container-fluid col-sm-12">
-        <script src="node_modules/bootstrap/dist/js/booststrap.js"></script>
-        <div class="row">
+        <div class="">
           {{-- Nav bar --}}
           <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
             <div class="container-fluid">
@@ -36,10 +34,10 @@
                   </ul>
                     <form class="d-flex">
                       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            <li class="nav-item1">
                               <a href="modal" type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="bi bi-book"></i> Log</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item2">
                               <a href="modal" type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><i class="bi bi-heptagon"></i> Settings</a>
                             </li>
                       </ul>
@@ -50,9 +48,9 @@
           {{-- End of NavBar --}}
 
           {{-- Container of Pomodoro --}}
-                        <div class="container-fluid" style="height: 100vh">
-                          <div class="row" style="">
-                            <div class="">
+                        <div class="container-fluid" style="height: 95vh">
+                          <div class="row">
+                            <div class=""  style="p-5">
                               <nav>
                                 <ul>
                                   <li><a href="#" class="text-light" onclick="Pomodoro()">Pomodoro</a></li>
@@ -62,15 +60,15 @@
                               </nav>
                             </div>
   
-                            <div class="col-sm-12 responsive-txt py-5 text-lg">
+                            <div class="col-sm-12 responsive-txt text-lg">
                               <p class="text-center" style="">00:00</p>
-                              <img src="image/play.svg" class="card-img-top" style="width: 7rem;" alt="...">
+                              <img src="image/play.svg" class="card-img-top" style="width: 8rem; align-items: center; padding-top" alt="...">
                             </div>
                           </div>
                         </div>
 
             {{-- Container of Instruction --}}
-          <div class="container-fluid bg-white py-5">
+          <div class="container-fluid bg-white py-5" style="">
             <div class="row">
               <h2>KEY BOARD SHORTCUTS</h2>
 
@@ -87,11 +85,11 @@
                             <div class="carousel-inner">
                               <div class="carousel-item active">
                                 <div class="info-section row">
-                                  <div class="card" id="card" style="width: 20rem;">
+                                  <div class="card" id="card" style="width: 19rem;">
                                       <h5>SPACE BAR</h5>
-                                      <img src="image/space.svg" class="card-img-top" style="width: 16.6rem;" alt="...">
+                                      <img src="image/space.svg" class="card-img-top" style="width: 15rem; display: flex; align-items: center;" alt="...">
                                         <div class="card-body">
-                                          <p class="card-text text-center">SPACE Start or Stop the timer.</p>
+                                          <p class="card-text text-center fs-4">SPACE Start or Stop the timer.</p>
                                         </div>
                                   </div>
                                 </div>
@@ -99,12 +97,14 @@
 
                               <div class="carousel-item">
                                   <div class="info-section row" >
-                                    <div class="card" id="card1" style="width: 20rem;">
+                                    <div class="card" id="card1" style="width: 22.5rem; height: 24.2rem">
                                         <h5>ALT + P</h5>
-                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
-                                      <img src="image/p.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <div style="display:flex; align-items: center;">
+                                        <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <img src="image/p.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      </div> 
                                         <div class="card-body">
-                                          <p class="card-text text-center">Pomodoro</p>
+                                          <p class="card-text text-center fs-4">Pomodoro</p>
                                         </div>
                                     </div>
                                   </div>
@@ -112,12 +112,14 @@
 
                               <div class="carousel-item">
                                   <div class="info-section row" >
-                                    <div class="card" id="card2" style="width: 20rem;">
+                                    <div class="card" id="card2" style="width: 22.5rem; height: 24.2rem">
                                       <h5>ALT + S</h5>
-                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
-                                      <img src="image/s.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <div style="display: flex; align-items: center;">
+                                        <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <img src="image/s.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      </div>
                                         <div class="card-body">
-                                          <p class="card-text text-center">Short Break</p>
+                                          <p class="card-text text-center fs-4">Short Break</p>
                                         </div>
                                     </div>
                                   </div>
@@ -125,12 +127,14 @@
 
                               <div class="carousel-item">
                                   <div class="info-section row" >
-                                    <div class="card" id="card3" style="width: 20rem;">
+                                    <div class="card" id="card3" style="width: 22.5rem; height: 24.2rem">
                                       <h5>ALT + L</h5>
-                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
-                                      <img src="image/l.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <div style="display: flex; align-items: center;">
+                                        <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <img src="image/l.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      </div>
                                         <div class="card-body">
-                                          <p class="card-text text-center">Long Break</p>
+                                          <p class="card-text text-center fs-3">Long Break</p>
                                         </div>
                                     </div>
                                   </div>
@@ -138,17 +142,18 @@
 
                               <div class="carousel-item">
                                   <div class="info-section row" >
-                                    <div class="card" id="card4" style="width: 20rem;">
+                                    <div class="card" id="card4" style="width: 22.5rem; height: 24.2rem">
                                       <h5>ALT + R</h5>
-                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
-                                      <img src="image/r.svg" class="card-img-top" style="width: 9rem;" alt="...">
-                                        <div class="card-body">
-                                          <p class="card-text text-center">Reset</p>
+                                      <div style="display: flex; align-items: center;">
+                                        <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <img src="image/r.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      </div>
+                                     <div class="card-body">
+                                          <p class="card-text text-center fs-3">Reset</p>
                                         </div>
                                     </div>
                                   </div>
                               </div>
-
                             </div>
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -164,7 +169,7 @@
             </div>
             {{-- End of Row --}}
 
-              <div class="info-section row" >
+              <div class="info-section row p-1">
                 <div class="image1 col-sm-8 col-md-6 col-lg-5">
                     <img class="img-responsive"src="image/notification.png" alt="">
                 </div>
@@ -192,7 +197,7 @@
                         <div class="row">
                           <div class="accordion col-sm-12 col-md-12">
                             <li>
-                              <input type="radio" name="accordion" id="first">
+                              <input type="checkbox" name="accordion" id="first">
                               <label for="first">Q. What is Pomodoro Technique?</label>
                               <div class="content">
                                 <p>A. The time management technique created by Francesco Cirillo
@@ -201,7 +206,7 @@
                             </li>
 
                             <li>
-                              <input type="radio" name="accordion" id="second">
+                              <input type="checkbox" name="accordion" id="second">
                               <label for="second">Q. Can you tell me the story without having to visit the website?</label>
                               <div class="content">
                                   <p>A. Well, it comprises of the following basic steps;<br>
@@ -214,7 +219,7 @@
                             </li>
 
                             <li>
-                              <input type="radio" name="accordion" id="third">
+                              <input type="checkbox" name="accordion" id="third">
                               <label for="third">Q. What is TomatoTimer?</label>
                               <div class="content">
                                 <p>It's an easy to use, flexible Pomodoro Technique timer.
@@ -223,9 +228,9 @@
                                   Storage instead of relying on Adobe Flash and other such technologies.</p>
                               </div>
                             </li>
-{{-- changes --}}
+
                             <li>
-                              <input type="radio" name="accordion" id="fourth">
+                              <input type="checkbox" name="accordion" id="fourth">
                               <label for="fourth">Q. Why use TomatoTimer?</label>
                               <div class="content">
                                 <p>A. Here's why:<br>
@@ -269,18 +274,26 @@
               </div>
             </div>
           </div>
-  {{-- End log modal --}}
-
+          {{-- End log modal --}}
 
 
     <script>
       AOS.init({
   duration: 1200,
   })
-    </script>
-      <script>
+
         function Pomodoro() {
           document.body.style.backgroundColor = "#70A1BD"; /* change background color */
+          document.getElementById("card").style.backgroundColor = "#70A1BD"; /* change background color */
+          document.getElementById("card").style.color = "#ffffff";
+          document.getElementById("card1").style.backgroundColor = "#70A1BD"; /* change background color */
+          document.getElementById("card1").style.color = "#ffffff";
+          document.getElementById("card2").style.backgroundColor = "#70A1BD"; /* change background color */
+          document.getElementById("card2").style.color = "#ffffff";
+          document.getElementById("card3").style.backgroundColor = "#70A1BD"; /* change background color */
+          document.getElementById("card3").style.color = "#ffffff";
+          document.getElementById("card4").style.backgroundColor = "#70A1BD"; /* change background color */
+          document.getElementById("card4").style.color = "#ffffff";
         }
         function Shortbreak() {
           document.body.style.backgroundColor = "#EA5C5C"; /* change background color */
@@ -299,12 +312,24 @@
           document.body.style.backgroundColor = "#244659"; /* change background color */
           document.getElementById("card").style.backgroundColor = "#244659"; /* change background color */
           document.getElementById("card").style.color = "#ffffff";
+          document.getElementById("card").style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card").style.color = "#ffffff";
+          document.getElementById("card1").style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card1").style.color = "#ffffff";
+          document.getElementById("card2").style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card2").style.color = "#ffffff";
+          document.getElementById("card3").style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card3").style.color = "#ffffff";
+          document.getElementById("card4").style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card4").style.color = "#ffffff";
         }
       </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
