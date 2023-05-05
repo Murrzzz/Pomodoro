@@ -14,224 +14,261 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css">
-    <title>Hello, world!</title>
+    <title>Pomodoro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&family=Montserrat:wght@100;400;900&family=Nunito:wght@200;500;900&display=swap" rel="stylesheet">
   </head>
-  <body class="box container-fluid col-sm-12">
-    <script src="node_modules/bootstrap/dist/js/booststrap.js"></script>
-    <div class="row">
-        {{-- Nav bar --}}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="#">Tomato Timer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                </ul>
-                <form class="d-flex">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logModal" data-bs-whatever="@fat"><i class="bi bi-book"></i> Log</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="bi bi-heptagon"></i> Settings</a>
-                        </li>
-                    </ul>
-                </form>
-            </div>
-            </div>
-        </nav>
-        {{-- End of NavBar --}}
-
-<<<<<<< HEAD
-        <div style="margin-top:20%" class="position-absolute start-50 translate-middle">
-            <p style="font-size:200px; color:white">00:00</p>
-=======
-        <div class="container-fluid" style="padding-top: 10%">
-          <div class="row"style="">
-          
-            <div>
-              <nav>
-                <ul>
-                  <li><a href="#" onclick="Pomodoro()">Pomodoro</a></li>
-                  <li><a href="#" onclick="Shortbreak()">Shortbreak</a></li>
-                  <li><a href="#" onclick="Longbreak()">Longbreak</a></li>
-                </ul>
-              </nav>
-            </div>
- 
-            <div class="col-sm-12 responsive-txt">
-              <p class="text-center" style="font-size:100px; color:white"">00:00</p>
   
+  
+  <body class="box container-fluid col-sm-12">
+        <script src="node_modules/bootstrap/dist/js/booststrap.js"></script>
+        <div class="row">
+          {{-- Nav bar --}}
+          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-fluid">
+              <h4 class="text-white">Tomato Timer</h4>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  </ul>
+                    <form class="d-flex">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                              <a href="modal" type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="bi bi-book"></i> Log</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="modal" type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><i class="bi bi-heptagon"></i> Settings</a>
+                            </li>
+                      </ul>
+                    </form>
+                </div>
             </div>
+          </nav>
+          {{-- End of NavBar --}}
 
+          {{-- Container of Pomodoro --}}
+                        <div class="container-fluid" style="height: 100vh">
+                          <div class="row" style="">
+                            <div class="">
+                              <nav>
+                                <ul>
+                                  <li><a href="#" class="text-light" onclick="Pomodoro()">Pomodoro</a></li>
+                                  <li><a href="#" class="text-light" onclick="Shortbreak()">Shortbreak</a></li>
+                                  <li><a href="#" class="text-light" onclick="Longbreak()">Longbreak</a></li>
+                                </ul>
+                              </nav>
+                            </div>
+  
+                            <div class="col-sm-12 responsive-txt py-5 text-lg">
+                              <p class="text-center" style="">00:00</p>
+                              <img src="image/play.svg" class="card-img-top" style="width: 7rem;" alt="...">
+                            </div>
+                          </div>
+                        </div>
 
-          </div>
->>>>>>> 321ff44157a4ee8fdb9b31c30b47dc3f7ffa1747
-        </div>
+            {{-- Container of Instruction --}}
+          <div class="container-fluid bg-white py-5">
+            <div class="row">
+              <h2>KEY BOARD SHORTCUTS</h2>
 
+              {{-- Carousel --}}
+                  <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class="active" aria-current="true"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" class="active" aria-current="true"></button>
+                    </div>
 
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div class="info-section row">
+                                  <div class="card" id="card" style="width: 20rem;">
+                                      <h5>SPACE BAR</h5>
+                                      <img src="image/space.svg" class="card-img-top" style="width: 16.6rem;" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text text-center">SPACE Start or Stop the timer.</p>
+                                        </div>
+                                  </div>
+                                </div>
+                              </div>
 
+                              <div class="carousel-item">
+                                  <div class="info-section row" >
+                                    <div class="card" id="card1" style="width: 20rem;">
+                                        <h5>ALT + P</h5>
+                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <img src="image/p.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text text-center">Pomodoro</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
 
-    </div>
+                              <div class="carousel-item">
+                                  <div class="info-section row" >
+                                    <div class="card" id="card2" style="width: 20rem;">
+                                      <h5>ALT + S</h5>
+                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <img src="image/s.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text text-center">Short Break</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
 
-  <div class="container-fluid bg-white">
-    <div class="row">
-      {{-- Carousel --}}
-      <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="info-section row" >
-              <div class="image1 col-sm-10 col-md-8">
-                  <img class="img-responsive" src="image/notification.png" alt="">
-              </div>
-              <div class="notification col-sm-10 col-md-4">
-                  <h3>Notification</h3>
-                  <p>You can change the audio tone and volume via Settings
-                      Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
-              </div>
+                              <div class="carousel-item">
+                                  <div class="info-section row" >
+                                    <div class="card" id="card3" style="width: 20rem;">
+                                      <h5>ALT + L</h5>
+                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <img src="image/l.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text text-center">Long Break</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+                              <div class="carousel-item">
+                                  <div class="info-section row" >
+                                    <div class="card" id="card4" style="width: 20rem;">
+                                      <h5>ALT + R</h5>
+                                      <img src="image/alt.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                      <img src="image/r.svg" class="card-img-top" style="width: 9rem;" alt="...">
+                                        <div class="card-body">
+                                          <p class="card-text text-center">Reset</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+                            </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                {{-- end of Carousel --}}
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="info-section row" >
-              <div class="image1 col-sm-10 col-md-8">
-                  <img class="img-responsive"src="image/notification.png" alt="">
+            {{-- End of Row --}}
+
+              <div class="info-section row" >
+                <div class="image1 col-sm-8 col-md-6 col-lg-5">
+                    <img class="img-responsive"src="image/notification.png" alt="">
+                </div>
+                <div class="notification col-sm-8 col-md-5 col-lg-5">
+                    <h3>Notification</h3>
+                    <p>You can change the audio tone and volume via Settings Desktop Notifications are currently supported in Chrome, Firefox and Safari.</p>
+                </div>
               </div>
-              <div class="notification col-sm-10 col-md-4">
-                  <h3>Notification</h3>
-                  <p>You can change the audio tone and volume via Settings
-                      Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
+
+              <div class="info-section1 row">
+                  <div class="settings col-sm-10 col-md-5 col-lg-6">
+                      <h3>Settings</h3>
+                      <p>You can set custom times, audio tone and volume via Settings.</p>
+                  </div>
+                  <div class="image2 col-sm-10 col-md-7 col-lg-6">
+                      <img class="img-responsive"src="image/settings.png" alt="">
+                  </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="info-section row" >
-              <div class="image1 col-sm-10 col-md-8">
-                  <img class="img-responsive"src="image/notification.png" alt="">
-              </div>
-              <div class="notification col-sm-10 col-md-4">
-                  <h3>Notification</h3>
-                  <p>You can change the audio tone and volume via Settings
-                      Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-        {{-- end of Carousel --}}
-    </div>
+
+            {{-- FAQs --}} 
+          
+                      <div class="px-5 py-5">
+                        <h3>FAQs</h3>
+                        <h5>Frequently Asked Questions</h5>
+                        <div class="row">
+                          <div class="accordion col-sm-12 col-md-12">
+                            <li>
+                              <input type="radio" name="accordion" id="first">
+                              <label for="first">Q. What is Pomodoro Technique?</label>
+                              <div class="content">
+                                <p>A. The time management technique created by Francesco Cirillo
+                                for a more productive way to work and study. For more information, click here.</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <input type="radio" name="accordion" id="second">
+                              <label for="second">Q. Can you tell me the story without having to visit the website?</label>
+                              <div class="content">
+                                  <p>A. Well, it comprises of the following basic steps;<br>
+                                - Decide on the task at hand<br>
+                                - Set the Pomodoro (timer) to 25 minutes<br>
+                                - Work on the task until the timer expires; Record with an X<br>
+                                - Take a Short Break (5 minutes)<br>
+                                - Every four "pomodoros", take a Long Break (10 minutes).</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <input type="radio" name="accordion" id="third">
+                              <label for="third">Q. What is TomatoTimer?</label>
+                              <div class="content">
+                                <p>It's an easy to use, flexible Pomodoro Technique timer.
+                                  It was inspired by Tomatoi.st and it uses jQuery and HTML5
+                                  features like Desktop Notifications, Audio API and Local
+                                  Storage instead of relying on Adobe Flash and other such technologies.</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <input type="radio" name="accordion" id="fourth">
+                              <label for="fourth">Q. Why use TomatoTimer?</label>
+                              <div class="content">
+                                <p>A. Here's why:<br>
+                                    - Clean and Crisp interface with a Mobile friendly layout.<br>
+                                    - Ability to Pause or Reset the timer intervals.<br>
+                                    - Audio notifications at the end of a timer period.<br>
+                                    - Desktop notifications. (Only supported in Google Chrome).<br>
+                                    - Keyboard shortcuts.<br>
+                                    - Ability to change the alert sound + volume via Settings.<br>
+                                    - Custom Timer Intervals.<br>
+                                    - A history of your activity. (Coming soon.)</p>
+                              </div>
+                            </li>
+                          </div>
+                        </div>
+                      </div>
 
 
-
-        <div class="info-section row" >
-          <div class="image1 col-sm-10 col-md-7 col-lg-6">
-              <img class="img-responsive"src="image/notification.png" alt="">
-          </div>
-          <div class="notification col-sm-10 col-md-5 col-lg-6">
-              <h3>Notification</h3>
-              <p>You can change the audio tone and volume via Settings
-                  Desktop Notifications are currently supported in Chrome, Firefox and Safari</p>
-          </div>
-        </div>
-
-
-      <div class="info-section1 row">
-          <div class="settings col-sm-10 col-md-5 col-lg-6">
-              <h3>Settings</h3>
-              <p>You can set custom times, audio tone and volume via Settings.</p>
-          </div>
-          <div class="image2 col-sm-10 col-md-7 col-lg-6">
-              <img class="img-responsive"src="image/settings.png" alt="">
-          </div>
-      </div>
-
-    
-    <div class="px-5 py-5" >
-        <h3>FAQs</h3>
-        <p>Frequenly ask Questions</p>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Q. What is Pomodoro Technique?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> A. The time management technique created by Francesco Cirillo for a more productive way to work and study. For more information, click here.
+        {{-- Log modal --}}
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Time Log</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="activity">
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Pomodoro Goal Tracker:</label>
+                      <br>
+                      <input class="btn" type="reset" value="Clear Pomodoro's Done Today">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <input class="btn" type="reset" value="Clear Timer Log">
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
           </div>
-
-        </div>
-    </div>
-
-{{-- Log modal --}}
-    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
-          </div>
-        </div>
-      </div>
-    </div>
   {{-- End log modal --}}
 
 
@@ -247,9 +284,22 @@
         }
         function Shortbreak() {
           document.body.style.backgroundColor = "#EA5C5C"; /* change background color */
+          document.getElementById("card").style.backgroundColor = "#EA5C5C"; /* change background color */
+          document.getElementById("card").style.color = "#ffffff";
+          document.getElementById("card1").style.backgroundColor = "#EA5C5C"; /* change background color */
+          document.getElementById("card1").style.color = "#ffffff";
+          document.getElementById("card2").style.backgroundColor = "#EA5C5C"; /* change background color */
+          document.getElementById("card2").style.color = "#ffffff";
+          document.getElementById("card3").style.backgroundColor = "#EA5C5C"; /* change background color */
+          document.getElementById("card3").style.color = "#ffffff";
+          document.getElementById("card4").style.backgroundColor = "#EA5C5C"; /* change background color */
+          document.getElementById("card4").style.color = "#ffffff";
+
         }
         function Longbreak() {
-          document.body.style.backgroundColor = "#81A5FD"; /* change background color */
+          document.body.style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card").style.backgroundColor = "#244659"; /* change background color */
+          document.getElementById("card").style.color = "#ffffff";
         }
       </script>
     <!-- Optional JavaScript; choose one of the two! -->
