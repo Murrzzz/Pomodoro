@@ -63,8 +63,11 @@
                             </div>
   
                             <div class="col-sm-12 responsive-txt py-5 text-lg">
-                              <p class="text-center" style="">00:00</p>
-                              <img src="image/play.svg" class="card-img-top" style="width: 7rem;" alt="...">
+                              <p class="text-center" id="countdown" style="">00:00</p>
+                              <button class="btn btn-primary" id="start-btn">Start</button>
+                              <button class="btn btn-primary" id="pause-btn">Pause</button>
+                              <button class="btn btn-primary" id="reset-btn">Reset</button>
+                              <img src="image/play.svg" class="card-img-top" onclick="Start()" style="width: 7rem;" alt="...">
                             </div>
                           </div>
                         </div>
@@ -302,6 +305,70 @@
           document.getElementById("card").style.color = "#ffffff";
         }
       </script>
+
+    <script>
+    function timerFunction() {
+      
+    
+      var time = "00:00:10",
+        parts = time.split(':'),
+        hours = +parts[0],
+        minutes = +parts[1],
+        seconds = +parts[2],
+        i = 0,
+        span = $('#countdown');
+
+      let timerInterval;
+      var  timer;
+      function startTimer() // Start the timer
+      {
+         timer = setInterval(function()
+        {
+                seconds--;
+                  if(seconds == -1)
+                   {
+                    seconds = 59;
+                    minutes--;
+                    
+                      if(minutes == -1)
+                      {
+                        minutes = 59;
+                        hours--;
+                          if(hours==-1)
+                          {
+                            alert("timer finished");
+                            clearInterval(timer);
+                            break;
+                            timerFunction(this);
+                            return;
+                          }
+                      }
+                    }
+                  span.text(correctNum(hours) + ":" + correctNum(minutes) + ":" + correctNum(seconds));
+        }, 1000);
+      }
+      function pauseTimer() { //Pause
+        clearInterval(timer);
+      }
+      function resetTimer()
+      {
+        clearInterval(timer);
+        
+        timerFunction(this);
+      }
+
+      function correctNum(num) { // Correct the format of timer
+        return (num<10)? ("0"+num):num;
+      }
+
+      document.getElementById("start-btn").addEventListener("click", startTimer);
+      document.getElementById("pause-btn").addEventListener("click", pauseTimer);
+      document.getElementById("reset-btn").addEventListener("click", resetTimer);        
+
+    }
+    document.addEventListener("DOMContentLoaded", timerFunction); //add listener the function will run after loading 
+    </script>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
