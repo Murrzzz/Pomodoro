@@ -223,7 +223,7 @@
                                   Storage instead of relying on Adobe Flash and other such technologies.</p>
                               </div>
                             </li>
-
+{{-- changes --}}
                             <li>
                               <input type="radio" name="accordion" id="fourth">
                               <label for="fourth">Q. Why use TomatoTimer?</label>
