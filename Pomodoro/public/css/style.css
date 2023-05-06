@@ -69,13 +69,13 @@ nav a{
   text-align: inherit;
 }
 /* time clock*/
-.responsive-txt p{
-  font-size: 100px;
-  font-weight: 400; 
+.responsive-txt {
+  font-size: 50px;
+  font-weight: 500; 
   font-family: 'Inter', sans-serif;
   color:white;
   height: 50%;
-  font-size: 20rem;
+  font-size: 10rem;
 }
 
 .responsive-txt img{

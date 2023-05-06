@@ -60,7 +60,7 @@
                               </nav>
                             </div>
   
-                            <div class="col-sm-12 responsive-txt text-lg">
+                            <div class="col-sm-12 responsive-txt">
                               <p class="text-center" style="">00:00</p>
                               <img src="image/play.svg" class="card-img-top" style="width: 8rem; align-items: center; padding-top" alt="...">
                             </div>
